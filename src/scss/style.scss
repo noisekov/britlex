@@ -1,0 +1,19 @@
+@import "fonts";
+@import "nullstyle";
+@import "header";
+
+body, html {
+    font-family: Poppins;
+}
+
+
+.container {
+    margin: 0 auto;
+    max-width: 1342px;
+}
+.logo {
+    color: #000;
+    span {
+        color: #939393;
+    }
+}
