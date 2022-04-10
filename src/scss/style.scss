@@ -34,6 +34,13 @@ body, html {
     color: #FFFFFF;
     background: #263238;
     border-radius: 15px;
+    &:hover {
+        background: #808080;
+    }
+    &:active {
+        background: #808080;
+        box-shadow: 1px 1px #808080;
+    }
 }
 h1{
     font-family: 'Poppins';
@@ -151,10 +158,10 @@ h1{
 /* SKILLS BLOCK ----------------*/
 .skills {
     // .skills__container
-    margin: 0 0 252px 0;
+    margin: 0 0 180px 0;
     &__body {
         display: grid;
-        gap: 10px;
+        gap: 18px;
         grid-template: 2fr / 3fr;
         grid-template-columns: repeat(auto-fit, minmax(434px, 1fr));
         grid-template-areas: 
@@ -166,7 +173,7 @@ h1{
     }
     // .skills__title
     &__title {
-        margin: 0 0 70px 0;
+        margin: 0 0 40px 0;
     }
     // .skills__subtitle
     &__subtitle {
@@ -177,9 +184,7 @@ h1{
         color: #8F95A5;
         margin: 0 0 36px 0;
     }
-
     // .skills__btn
-
     &__btn {
         display: inline-block;
         font-family: 'Poppins';
@@ -189,7 +194,7 @@ h1{
         padding: 17px 63px;
     }
     &__block {
-
+        padding: 0 40px 0 40px;
     }
     &__text {
         font-family: 'Poppins';
@@ -205,8 +210,6 @@ h1{
     }
     &__flex_listening{
         &-body {
-            display: flex;
-            flex-direction: column;
         }
     }
     &__speaking {
@@ -232,10 +235,6 @@ h1{
     &__flex_reading{
     }
 }
-.container {
-}
-.btn {
-}
 .title {
     text-align: center;
     font-family: 'Poppins';
@@ -246,9 +245,8 @@ h1{
 }
 /*--------about block ---------*/
 .about {
-    margin: 0 0 220px 0;
+    margin: 0 0 200px 0;
     // .about__container
-
     &__container {
         display: flex;
         @media (max-width:767px) {
@@ -256,9 +254,7 @@ h1{
             text-align: center;
         }
     }
-
     // .about__body
-
     &__body {
         display: flex;
         flex-direction: column;
@@ -271,9 +267,7 @@ h1{
             margin: 0 40px 0 0;
         }
     }
-
     // .about__title
-
     &__title {
         text-align: start;
         margin: 0 0 20px 0;
@@ -281,9 +275,7 @@ h1{
             text-align: center;
         }
     }
-
     // .about__subtitle
-
     &__subtitle {
         font-family: 'Poppins';
         font-weight: 400;
@@ -291,9 +283,7 @@ h1{
         line-height: calc(30 /20 * 100%);
         color: #8F95A5;
     }
-
     // .about__other
-
     &__other {
         display: flex;
         justify-content: space-between;
@@ -301,10 +291,11 @@ h1{
         @media (max-width:767px) {
             text-align: center;
         }
+        @media (max-width:575px) {
+            flex-direction: column;
+        }
     }
-
     // .about__img
-
     &__img {
         flex: 1 1 auto;
         & img {
@@ -312,10 +303,6 @@ h1{
             max-height: 100%;
         }
     }
-}
-.container {
-}
-.title {
 }
 .other {
     // .other_pupils
@@ -344,3 +331,161 @@ h1{
     line-height: calc(30 / 20 * 100%);
     color: #8F95A5;
 }
+/*---------PRICING BLOCK--------------------*/
+.pricing {
+    margin: 0 0 220px 0;
+    // .pricing__container
+    &__container {
+    }
+    // .pricing__title
+    &__title {
+        margin: 0 0 40px 0;
+    }
+    // .pricing__block
+    &__block {
+        display: flex;
+        flex-direction: column;
+        flex: 1 1 430px;
+        align-items: flex-start;
+        justify-content:space-between ;
+        margin: 0 16px 0 16px;
+        @media (max-width:767px) {
+            align-items: center;
+            margin: 0 0 80px 0;
+        }
+    }
+    &__body {
+        display: flex;
+        @media (max-width:767px) {
+            flex-direction: column;
+        }
+    }
+    // .pricing__img
+    &__img {
+        align-self: center;
+    }
+    // .pricing__text
+    &__text {
+        font-family: 'Poppins';
+        font-weight: 600;
+        font-size: 30px;
+        line-height: calc(48 / 30 * 100%);
+        color: #263238;
+        @media (max-width:767px) {
+            text-align: center;
+        }
+    }
+    // .pricing__subtitle
+    &__subtitle {
+        font-family: 'Poppins';
+        font-weight: 400;
+        font-size: 20px;
+        line-height: calc(30 / 20 * 100%);
+        color: #8F95A5;
+        margin: 0 0 30px 0;
+        @media (max-width:767px) {
+            text-align: center;
+        }
+    }
+    // .pricing__price
+    &__price {
+        display: inline-flex;
+        background: #EEEEEE;
+        border-radius: 5px;
+        padding: 1px 18px;
+    }
+    // .pricing__price-cost
+    &__price-cost {
+        font-family: 'Poppins';
+        font-weight: 400;
+        font-size: 30px;
+        line-height: calc(45 / 30 * 100%);
+        color: #263238;
+        padding: 0 8px 0 0;
+    }
+    // .pricing__price-text
+    &__price-text {
+        font-family: 'Poppins';
+        font-weight: 400;
+        font-size: 18px;
+        line-height: calc(27 / 18 *100%);
+        color: #546269;
+        align-self: center;
+    }
+}
+/*------CONTACT------*/
+.contact {
+    margin: 0 0 100px 0;
+    // .contact__container
+    &__container {
+        display: flex;
+        @media (max-width:767px) {
+            flex-direction: column;
+        }
+    }
+    // .contact__img
+    &__img {
+        margin: 0 114px 0 0;
+        @media (max-width:1200px) {
+            margin: 0 50px 0 0;
+        }
+        @media (max-width:767px) {
+            align-self: center;
+        }
+        & img {
+            flex: 1 1 auto;
+        }
+    }
+    // .contact__body
+    &__body {
+    }
+    // .contact__title
+    &__title {
+        text-align: start;
+        margin: 0 0 35px 0;
+        @media (max-width:767px) {
+            text-align: center;
+        }
+    }
+    // .contact__subtitle
+    &__subtitle {
+        font-family: 'Poppins';
+        font-style: normal;
+        font-weight: 400;
+        font-size: 20px;
+        line-height: calc(30 / 20 * 100%);
+        color: #8F95A5;
+        margin: 0 0 50px 0;
+        @media (max-width:767px) {
+            text-align: center;
+        }
+    }
+    // .contact__form
+    &__form {
+        display: flex;
+        flex-direction: row;
+        @media (max-width:575px) {
+            flex-direction: column;
+        }
+    }
+    &__input{
+        display: inline-flex;
+        flex: 1 1 auto;
+        border: 1px solid #8F95A5;
+        box-sizing: border-box;
+        border-radius: 10px;
+        padding: 18px 30px 18px 30px;
+        margin: 0 12px 0 0;
+        line-height: calc(24 / 16 * 100%);
+        font-size: 16px;
+        @media (max-width:575px) {
+            margin: 0 0 17px 0;
+        }
+    }
+}
+.btn {
+    flex: inline-flex;
+    font-size: 30px;
+    padding: 20px 75px;
+}
+

@@ -7,7 +7,7 @@ import Swiper, { Navigation, Pagination } from "swiper";
 const swiper = new Swiper();
 
 
-const menuBody = document.querySelector('.header__burger');
+const menuBody = document.querySelector('.menu__burger');
 document.addEventListener('click', burger);
 
 function burger(event) {
