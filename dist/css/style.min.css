@@ -237,6 +237,7 @@ h1, h2, h3, h4, h5, h6 {
 
 .menu__burger.\.active {
   display: block;
+  transition: all 2s ease;
 }
 
 .menu__burger {
@@ -535,6 +536,20 @@ h1 {
   grid-template-columns: repeat(auto-fit, minmax(434px, 1fr));
   grid-template-areas: "Speaking" "Writing" "Reading" "Listening";
 }
+@media (max-width: 767px) {
+  .skills__body {
+    grid-template: 2fr/2fr;
+    grid-template-columns: repeat(auto-fit, minmax(434px, 1fr));
+    grid-template-areas: "Speaking" "Writing" "Reading" "Listening";
+  }
+}
+@media (max-width: 575px) {
+  .skills__body {
+    grid-template: 4fr/1fr;
+    grid-template-columns: repeat(auto-fit, minmax(434px, 1fr));
+    grid-template-areas: "Speaking" "Writing" "Reading" "Listening";
+  }
+}
 .skills__title {
   margin: 0 0 40px 0;
 }
@@ -555,7 +570,9 @@ h1 {
   padding: 17px 63px;
 }
 .skills__block {
-  padding: 0 40px 0 40px;
+  padding: 20px 40px 20px 40px;
+  background: #F5F5F5;
+  border-radius: 10px;
 }
 .skills__text {
   font-family: "Poppins";
@@ -569,19 +586,67 @@ h1 {
   grid-column: 2/3;
   grid-row: 2/2;
 }
+@media (max-width: 767px) {
+  .skills__listening {
+    grid-column: 2/2;
+    grid-row: 2/2;
+  }
+}
+@media (max-width: 575px) {
+  .skills__listening {
+    grid-row: 4/4;
+    grid-column: 1/1;
+  }
+}
 .skills__speaking {
   grid-area: "Speaking";
   grid-row: 1/2;
+}
+@media (max-width: 767px) {
+  .skills__speaking {
+    grid-column: 1/2;
+    grid-row: 1/2;
+  }
+}
+@media (max-width: 575px) {
+  .skills__speaking {
+    grid-column: 1/1;
+    grid-row: 1/4;
+  }
 }
 .skills__writing {
   grid-area: "Writing";
   grid-column: 2/3;
   grid-row: 1/2;
 }
+@media (max-width: 767px) {
+  .skills__writing {
+    grid-column: 2/2;
+    grid-row: 1/2;
+  }
+}
+@media (max-width: 575px) {
+  .skills__writing {
+    grid-row: 2/4;
+    grid-column: 1/1;
+  }
+}
 .skills__reading {
   grid-area: "Reading";
   grid-column: 3/3;
   grid-row: 1/2;
+}
+@media (max-width: 767px) {
+  .skills__reading {
+    grid-column: 1/2;
+    grid-row: 2/2;
+  }
+}
+@media (max-width: 575px) {
+  .skills__reading {
+    grid-column: 1/1;
+    grid-row: 3/4;
+  }
 }
 .title {
   text-align: center;

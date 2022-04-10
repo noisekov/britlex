@@ -119,6 +119,7 @@
 }
 .menu__burger.\.active {
     display: block;
+    transition: all 2s ease;
 }
 .menu__burger {
     display: none;
