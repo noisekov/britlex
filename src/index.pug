@@ -2,9 +2,92 @@ doctype html
 html(lang="en")
     include html/head.pug
     title Главная
-    body 
-        include html/header
-        main 
-            h1  Learn Any Foreign Language
-        include html/footer
-        script(src="js/app.min.js") 
+    body
+        .wrapper
+            include html/header
+            main.main
+                .main__container.container
+                    .main__body
+                        h1  Learn <br> Any Foreign Language
+                        .main__body_img 
+                            img(src="/img/light.png", alt="light")
+                        .main__title With our teachers who write a program for each student, you will be able to make your first sketch after the first lesson. 
+                        a(href="#").main__btn.btn Get started 
+                    .main__img
+                        img(src="/img/main.jpg", alt="girl_with_music")
+            section.skills 
+                .skills__container.container
+                    .skills__title.title
+                        h2 Skills 
+                    .skills__body
+                        .skills__speaking
+                            .skills__flex_speaking
+                                .skills__img 
+                                    img(src="/img/Speaking.jpg", alt="Speaking")
+                                .skills__text Speaking
+                                .skills__subtitle Improve your English skills and confidence. Live classes and interactive lessons online. 20% extra free for a limited time only <br><br> Learn English online and improve your skills through our high-quality courses and resources – all designed for adult language learners.
+                                a(href="#").skills__btn.btn Learn more
+                        .skills__writing
+                            .skills__flex_writing
+                                .skills__img
+                                    img(src="/img/Writing.jpg", alt="Writing")
+                                .skills__text Writing
+                                .skills__subtitle One of the most important and extensive areas of natural science, the science that studies substances, also their composition 
+                                a(href="#").skills__btn.btn Learn more
+                        .skills__reading
+                            .skills__flex_reading
+                                .skills__img
+                                    img(src="/img/Reading.jpg", alt="Reading")
+                                .skills__text Reading
+                                .skills__subtitle perception and response actions of the user resulting from the use and/or upcoming use of the product, system or service
+                                a(href="#").skills__btn.btn Learn more
+                        .skills__listening
+                            .skills__flex_listening
+                                .skills__img
+                                    img(src="/img/Listening.jpg", alt="Listening")
+                                    .skills__flex_listening-body
+                                        .skills__text Listening
+                                        .skills__subtitle Here you can find activities to practise your listening skills. Listening will help you to improve your understanding 
+                                        a(href="#").skills__btn.btn Learn more
+            .about 
+                .about__container.container 
+                    .about__body 
+                        .about__title.title About Us
+                        .about__subtitle The model offers a framework for discussing problems related to the user's experience, as well as possible ways and means of solving them. Application development begins at the top level (strategy), where the future software product is described quite abstractly from the point of view of the expectations of both users and the customer.
+                        .about__other
+                            .other_pupils
+                                .other-number 800
+                                .other-text Pupils
+                            .other_teachers
+                                .other-number 18
+                                .other-text Teachers
+                            .other_foreign 
+                                .other-number 6
+                                .other-text Foreign languages
+                    .about__img
+                        img(src="/img/about.jpg", alt="about")
+            .pricing
+                .pricing__container.container 
+                    .pricing__block 
+                        .pricing__img
+                        .pricing__title Self-study online course 
+                        .pricing__subtitle
+                        .pricing__price
+                            .pricing__price-cost 
+                            .pricing__price-text
+                    .pricing__block 
+                        .pricing__img
+                        .pricing__title Live online classes
+                        .pricing__subtitle
+                        .pricing__price
+                            .pricing__price-cost 
+                            .pricing__price-text
+                    .pricing__block 
+                        .pricing__img
+                        .pricing__title Personal Tuition
+                        .pricing__subtitle
+                        .pricing__price
+                            .pricing__price-cost 
+                            .pricing__price-text
+            include html/footer
+            script(src="js/app.min.js")
