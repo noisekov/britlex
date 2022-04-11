@@ -162,21 +162,15 @@ h1{
     &__body {
         display: grid;
         gap: 18px;
-        grid-template: 2fr / 3fr;
-        grid-template-columns: repeat(auto-fit, minmax(434px, 1fr));
         grid-template-areas: 
-            "Speaking" "Writing" "Reading"
-                        "Listening";    
-        @media (max-width:767px) {
-            grid-template: 2fr / 2fr;
-            grid-template-columns: repeat(auto-fit, minmax(434px, 1fr));
+            "Speaking Writing Reading"
+            "Speaking Listening Listening"; 
+        @media (max-width:767px) {  
             grid-template-areas: 
-                "Speaking" "Writing"
-                "Reading" "Listening";  
+                "Speaking Writing"
+                "Reading Listening";  
         } 
         @media (max-width:575px) {
-            grid-template: 4fr / 1fr;
-            grid-template-columns: repeat(auto-fit, minmax(434px, 1fr));
             grid-template-areas: 
                 "Speaking" 
                 "Writing"
@@ -204,10 +198,20 @@ h1{
     &__btn {
         display: inline-block;
         font-family: 'Poppins';
-        font-weight: 500;
         font-size: 18px;
+        font-weight: 500;
         line-height: calc(27 / 18 * 100%);
-        padding: 17px 63px;
+        padding: 15px 55px;
+        color: #FFFFFF;
+        background: #263238;
+        border-radius: 15px;
+        &:hover {
+            background: #808080;
+        }
+        &:active {
+            background: #808080;
+            box-shadow: 1px 1px #808080;
+        }
     }
     &__block {
         padding: 20px 40px 20px 40px;
@@ -222,42 +226,29 @@ h1{
         color: #263238;
     }
     &__listening {
-        grid-area: "Listening";
-        grid-column: 2/3;
-        grid-row: 2/2;
+        grid-area: Listening;
         @media (max-width:767px) {
             grid-column: 2/2;
             grid-row: 2/2;
         } 
         @media (max-width:575px) {
-            grid-row: 4/4;
-            grid-column: 1/1;
-        }   
-    }
-    &__flex_listening{
-
-        &-body {
-        }
-    }
-    &__speaking {
-        grid-area: "Speaking";
-        grid-row: 1/2;
-        @media (max-width:767px) {
-            grid-column: 1/2;
-            grid-row: 1/2;
-        }   
-        @media (max-width:575px) {
             grid-column: 1/1;
             grid-row: 1/4;
         }   
     }
-    &__flex_speaking{
-
+    &__speaking {
+        grid-area: Speaking;
+        @media (max-width:767px) {
+            grid-column: 1/2;
+            grid-row: 1/1;
+        }   
+        @media (max-width:575px) {
+            grid-column: 1/1;
+            grid-row: 4/4;
+        }   
     }
     &__writing {
-        grid-area: "Writing";
-        grid-column: 2/3;
-        grid-row: 1/2;
+        grid-area: Writing;
         @media (max-width:767px) {
             grid-column: 2/2;
             grid-row: 1/2;
@@ -267,13 +258,8 @@ h1{
             grid-column: 1/1;
         }   
     }
-    &__flex_writing{
-        
-    }
     &__reading {
-        grid-area: "Reading";
-        grid-column: 3/3;
-        grid-row: 1/2;
+        grid-area: Reading;
         @media (max-width:767px) {
             grid-column: 1/2;
             grid-row: 2/2;
@@ -282,8 +268,6 @@ h1{
             grid-column: 1/1;
             grid-row: 3/4;  
         }   
-    }
-    &__flex_reading{
     }
 }
 .title {
@@ -316,6 +300,9 @@ h1{
         }
         @media (max-width:900px) {
             margin: 0 40px 0 0;
+        }
+        @media (max-width:575px) {
+            margin: 0;
         }
     }
     // .about__title
