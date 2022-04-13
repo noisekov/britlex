@@ -2,7 +2,9 @@
 @import "nullstyle";
 @import "header";
 @import "footer";
-
+img {
+    max-width: 100%;
+}
 body, html {
     font-family: Poppins;
     font-size: 20px;
@@ -143,9 +145,6 @@ h1{
             padding: 14px 60px;
             font-size: 24px;
         }
-        @media (max-width: 575px) {
-            font-size: 16px;
-        }
     }
     // .main__img
     &__img{
@@ -162,15 +161,18 @@ h1{
     &__body {
         display: grid;
         gap: 18px;
+        grid-template-columns: repeat(minmax(3, 1fr));
         grid-template-areas: 
             "Speaking Writing Reading"
             "Speaking Listening Listening"; 
-        @media (max-width:767px) {  
+        @media (max-width:1350px) {  
+            grid-template-columns: repeat(minmax(2, 1fr));
             grid-template-areas: 
                 "Speaking Writing"
                 "Reading Listening";  
         } 
-        @media (max-width:575px) {
+        @media (max-width:950px) {
+            grid-template-columns: minmax(320px, 1fr);
             grid-template-areas: 
                 "Speaking" 
                 "Writing"
@@ -179,7 +181,8 @@ h1{
         }   
     }
     // .skills__img
-    &__img {
+    &__img img{
+       max-width: 100%;
     }
     // .skills__title
     &__title {
@@ -227,44 +230,44 @@ h1{
     }
     &__listening {
         grid-area: Listening;
-        @media (max-width:767px) {
+        @media (max-width:1350px) {
             grid-column: 2/2;
             grid-row: 2/2;
         } 
-        @media (max-width:575px) {
+        @media (max-width:950px) {
             grid-column: 1/1;
             grid-row: 1/4;
         }   
     }
     &__speaking {
         grid-area: Speaking;
-        @media (max-width:767px) {
+        @media (max-width:1350px) {
             grid-column: 1/2;
             grid-row: 1/1;
         }   
-        @media (max-width:575px) {
+        @media (max-width:950px) {
             grid-column: 1/1;
             grid-row: 4/4;
         }   
     }
     &__writing {
         grid-area: Writing;
-        @media (max-width:767px) {
+        @media (max-width:1350px) {
             grid-column: 2/2;
             grid-row: 1/2;
         }   
-        @media (max-width:575px) {
+        @media (max-width:950px) {
             grid-row:2/4;
             grid-column: 1/1;
         }   
     }
     &__reading {
         grid-area: Reading;
-        @media (max-width:767px) {
+        @media (max-width:1350px) {
             grid-column: 1/2;
             grid-row: 2/2;
         } 
-        @media (max-width:575px) {
+        @media (max-width:950px) {
             grid-column: 1/1;
             grid-row: 3/4;  
         }   
@@ -387,14 +390,14 @@ h1{
         align-items: flex-start;
         justify-content:space-between ;
         margin: 0 16px 0 16px;
-        @media (max-width:767px) {
+        @media (max-width:1130px) {
             align-items: center;
             margin: 0 0 80px 0;
         }
     }
     &__body {
         display: flex;
-        @media (max-width:767px) {
+        @media (max-width:1130px) {
             flex-direction: column;
         }
     }
@@ -409,7 +412,7 @@ h1{
         font-size: 30px;
         line-height: calc(48 / 30 * 100%);
         color: #263238;
-        @media (max-width:767px) {
+        @media (max-width:1130px) {
             text-align: center;
         }
     }
@@ -421,7 +424,7 @@ h1{
         line-height: calc(30 / 20 * 100%);
         color: #8F95A5;
         margin: 0 0 30px 0;
-        @media (max-width:767px) {
+        @media (max-width:1130px) {
             text-align: center;
         }
     }
@@ -457,7 +460,7 @@ h1{
     // .contact__container
     &__container {
         display: flex;
-        @media (max-width:767px) {
+        @media (max-width:1080px) {
             flex-direction: column;
         }
     }
@@ -467,7 +470,7 @@ h1{
         @media (max-width:1200px) {
             margin: 0 50px 0 0;
         }
-        @media (max-width:767px) {
+        @media (max-width:1080px) {
             align-self: center;
         }
         & img {
@@ -481,7 +484,7 @@ h1{
     &__title {
         text-align: start;
         margin: 0 0 35px 0;
-        @media (max-width:767px) {
+        @media (max-width:1080px) {
             text-align: center;
         }
     }
@@ -494,7 +497,7 @@ h1{
         line-height: calc(30 / 20 * 100%);
         color: #8F95A5;
         margin: 0 0 50px 0;
-        @media (max-width:767px) {
+        @media (max-width:1080px) {
             text-align: center;
         }
     }
@@ -520,10 +523,15 @@ h1{
             margin: 0 0 17px 0;
         }
     }
+    &__btn {
+        flex: inline-flex;
+        font-size: 30px;
+        padding: 20px 75px;
+        @media (max-width:575px) {
+            font-size: 20px;
+            padding: 15px 50px;
+        }
+    }
 }
-.btn {
-    flex: inline-flex;
-    font-size: 30px;
-    padding: 20px 75px;
-}
+
 
