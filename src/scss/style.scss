@@ -235,8 +235,8 @@ h1{
             grid-row: 2/2;
         } 
         @media (max-width:950px) {
-            grid-column: 1/1;
-            grid-row: 1/4;
+            grid-column: 1/2;
+            grid-row: 4/5;
         }   
     }
     &__speaking {
@@ -246,8 +246,8 @@ h1{
             grid-row: 1/1;
         }   
         @media (max-width:950px) {
-            grid-column: 1/1;
-            grid-row: 4/4;
+            grid-column: 1/2;
+            grid-row: 1/2;
         }   
     }
     &__writing {
@@ -257,8 +257,8 @@ h1{
             grid-row: 1/2;
         }   
         @media (max-width:950px) {
-            grid-row:2/4;
-            grid-column: 1/1;
+            grid-row:2/3;
+            grid-column: 1/2;
         }   
     }
     &__reading {
@@ -268,7 +268,7 @@ h1{
             grid-row: 2/2;
         } 
         @media (max-width:950px) {
-            grid-column: 1/1;
+            grid-column: 1/2;
             grid-row: 3/4;  
         }   
     }
